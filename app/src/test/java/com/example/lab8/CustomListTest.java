@@ -47,6 +47,20 @@ public class CustomListTest {
         assertEquals(true, list.hasCity(city));
     }
 
+    /**
+     * This test checks if a city is successfully removed from the list.
+     * It should fail until the deleteCity method is implemented.
+     */
+    @Test
+    public void testDeleteCity() {
+        list = MockCityList();
+        City city = new City("Estevan", "SK");
+        list.addCity(city);
+        int listSize = list.getCount();
+        list.deleteCity(city);
+        assertEquals(listSize - 1, list.getCount());
+    }
+
 }
 
 
