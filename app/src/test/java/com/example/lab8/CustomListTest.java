@@ -61,6 +61,21 @@ public class CustomListTest {
         assertEquals(listSize - 1, list.getCount());
     }
 
+    /**
+     * This test checks the number of cities in the list.
+     * It should fail if the countCities method is not properly implemented.
+     */
+    @Test
+    public void testCountCities() {
+        list = MockCityList();
+        City city1 = new City("Estevan", "SK");
+        City city2 = new City("Calgary", "AB");
+        list.addCity(city1);
+        list.addCity(city2);
+        assertEquals(2, list.countCities());
+    }
+
+
 }
 
 
